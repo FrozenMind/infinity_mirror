@@ -25,3 +25,23 @@ function wipe(red, green, blue) {
     console.log('color wipe started');
   })
 }
+
+function twinkleRandom() {
+  $.ajax({
+    data: {},
+    type: 'PUT',
+    url: '/twinkle-random'
+  }).done(data => {
+    console.log('twinkle random started');
+  })
+}
+
+runningLights() {
+  $.ajax({
+    data: {},
+    type: 'PUT',
+    url: '/running-lights'
+  }).done(data => {
+    console.log('running lights started');
+  })
+}
