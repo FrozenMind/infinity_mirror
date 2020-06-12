@@ -110,10 +110,10 @@ def running_lights():
                 return
             pos = pos + 1
             for i in range(strip.numPixels()):
-                setPixel(i, ((math.sin(i + pos) * 127 + 128) / 255) * random.randint(0, 255),
-                         ((math.sin(i + pos) * 127 + 128) / 255)
-                         * random.randint(0, 255),
-                         ((math.sin(i + pos) * 127 + 128) / 255) * random.randint(0, 255))
+                set_pixel(i, ((math.sin(i + pos) * 127 + 128) / 255) * random.randint(0, 255),
+                          ((math.sin(i + pos) * 127 + 128) / 255) *
+                          random.randint(0, 255),
+                          ((math.sin(i + pos) * 127 + 128) / 255) * random.randint(0, 255))
             strip.show()
             sleep(0.05)
     return 'OK'
