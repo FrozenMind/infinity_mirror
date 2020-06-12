@@ -95,6 +95,7 @@ def twinkle_random():
             strip.show()
             sleep(0.1)
         set_all(0, 0, 0)
+    return 'OK'
 
 
 @app.route('/running-lights', methods=['PUT'])
@@ -115,6 +116,7 @@ def running_lights():
                          ((math.sin(i + pos) * 127 + 128) / 255) * random.randint(0, 255))
             strip.show()
             sleep(0.05)
+    return 'OK'
 
 
 # @app.route('/meteor-rain', methods=['PUT'])
