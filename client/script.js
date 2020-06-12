@@ -36,7 +36,7 @@ function twinkleRandom() {
   })
 }
 
-runningLights() {
+function runningLights() {
   $.ajax({
     data: {},
     type: 'PUT',
