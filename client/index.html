@@ -7,21 +7,34 @@
 </head>
 
 <body>
-  <h1>Colors</h1>
-  <button onclick="color(0, 255, 0)">GREEN</button>
-  <button onclick="color(255, 0, 0)">RED</button>
-  <button onclick="color(0, 0, 255)">BLUE</button>
-  <button onclick="color(0, 0, 0)">OFF</button>
-
-  <h1>Wipe</h1>
-  <button onclick="wipe(0, 255, 0)">GREEN</button>
-  <button onclick="wipe(255, 0, 0)">RED</button>
-  <button onclick="wipe(0, 0, 255)">BLUE</button>
-  <button onclick="wipe(0, 0, 0)">OFF</button>
-
-  <h1>Modes</h1>
-  <button onclick="twinkleRandom()">TWINKLE RANDOM</button>
-  <button onclick="runningLights()">RUNNING LIGHTS</button>
+  <div class="main-container">
+    <div class="color-container-outter">
+      <p>Colors</p>
+      <div class="color-container-inner">
+        <button class="color-btn-1" onclick="color(0, 255, 0)">GREEN</button>
+        <button class="color-btn-2" onclick="color(255, 255, 255)">WHITE</button>
+        <button class="color-btn-3" onclick="color(0, 0, 0)">OFF</button>
+        <input class="color-picker" type="color" id="color-picker" value="#66B3FF">
+        <button class="custom-color" onclick="customColor()">CUSTOM</button>
+      </div>
+    </div>
+    <div class="wipe-container-outter">
+      <p>Wipe</p>
+      <div class="wipe-container-inner">
+        <button onclick="wipe(0, 255, 0)">GREEN</button>
+        <button onclick="wipe(255, 0, 0)">RED</button>
+        <button onclick="wipe(0, 0, 255)">BLUE</button>
+        <button onclick="wipe(0, 0, 0)">OFF</button>
+      </div>
+    </div>
+    <div class="mode-container-outter">
+      <p>Modes</p>
+      <div class="mode-container-inner">
+        <button onclick="twinkleRandom()">TWINKLE RANDOM</button>
+        <button onclick="runningLights()">RUNNING LIGHTS</button>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

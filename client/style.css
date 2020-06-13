@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+}
+
+.color-container-outter, .wipe-container-outter, .mode-container-outter {
+  padding: 1% 2% 1% 2%;
+  width: 96%;
+  height: 98%;
+}
+
+.color-container-outter {
+  background-color: #fdde9b;
+}
+
+.wipe-container-outter {
+  background-color: #9bfdde;
+}
+
+.mode-container-outter {
+  background-color: #de9bfd;
+}
+
+.color-container-inner {
+  width: 100%;
+  height: 90%;
+  display: grid;
+  grid-template-columns: 15% 15% 15% 15% 15% 15%;
+  grid-template-rows: 40% 40%;
+  gap: 2%;
+  grid-template-areas:
+    "color1 color1 color2 color2 color3 color3"
+    "colorpicker colorpicker colorpicker customcolor customcolor customcolor";
+}
+
+.color-btn-1 {
+  grid-area: color1;
+}
+
+.color-btn-2 {
+  grid-area: color2;
+}
+
+.color-btn-3 {
+  grid-area: color3;
+}
+
+.color-picker {
+  grid-area: colorpicker;
+  width: 100%;
+  height: 100%;
+}
+
+.custom-color {
+  grid-area: customcolor
+}
+
+.wipe-container-inner {
+  width: 100%;
+  height: 90%;
+  display: grid;
+  grid-template-columns: 48% 48%;
+  grid-template-rows: 40% 40%;
+  gap: 2%;
+  grid-template-areas:
+    "wipe1 wipe2"
+    "wipe3 wipe4";
+}
+
+.mode-container-inner {
+  width: 100%;
+  height: 90%;
+  display: grid;
+  grid-template-columns: 48% 48%;
+  grid-template-rows: 80%;
+  gap: 2%;
+  grid-template-areas:
+    "mode1 mode2";
+}
+
+p {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+button {
+  padding: 16px 42px;
+  box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
+  line-height: 1.25;
+  background: #FC6E51;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  position: relative;
+  transition: background-color .6s ease;
+  overflow: hidden;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    transform-style: flat;
+    transform: translate3d(-50%,-50%,0);
+    background: rgba(white,.1);
+    border-radius: 100%;
+    transition: width .3s ease, height .3s ease;
+  }
+  &:focus,
+  &:hover {
+      background: darken(#FC6E51,7%);
+  }
+  &:active {
+    &:after {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
